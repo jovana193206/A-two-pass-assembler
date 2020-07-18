@@ -1,0 +1,4 @@
+.global a
+.text
+	addeq r5[32], $a
+.end

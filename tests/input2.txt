@@ -1,0 +1,16 @@
+.global a
+
+.text
+	moveq r1, &a
+b:  	testeq r3, 3
+	popeq *0x20
+	calleq func
+	testeq psw, 1
+	noteq r5[32], r1
+	addeq r1, r3[a]
+	shleq r2, r4[0x5]
+	
+.data
+a:  .word 0x78
+
+.end

@@ -1,0 +1,15 @@
+.global x, y
+
+.data
+a: .long x
+b: .char y
+
+.text
+	mulne a, r3
+	andgt r5, c
+	iretal
+	
+.rodata
+c: .long a, y
+
+.end

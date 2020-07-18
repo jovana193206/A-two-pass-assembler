@@ -1,0 +1,16 @@
+.global a, c
+.text
+	moval r1, a
+	pushal b
+labela: popal r3
+	jmpal $c
+	retal
+.data
+a: .long 0x5678
+b: .char 0xab, 1
+.rodata
+d: .word 0xaf
+.bss
+e: .skip 5
+   .align 2
+.end
